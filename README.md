@@ -11,26 +11,6 @@ Luna is an Android-based clothing rental application developed as a Mini Project
 
 ---
 
-## 👩‍💻 Developed By
-
-| Name | USN |
-|------|-----|
-| Arya Nandini Gupta | 23DBCAG014 |
-| Chandrika V | 23DBCAG021 |
-
----
-
-## 👨‍🏫 Guided By
-
-| Name | Designation |
-|------|-------------|
-| Prof. Aurangjeb Khan | Assistant Professor |
-| Prof. V T Kruthika | Assistant Professor |
-
-**School of Science and Computer Studies**
-CMR University, #5 Bhuvanagiri, OMBR Layout, Bangalore – 560 043, Karnataka, India
-
----
 
 ## 📱 App Screenshots
 
