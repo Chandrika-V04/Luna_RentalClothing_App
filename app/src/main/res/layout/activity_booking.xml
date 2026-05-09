@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- 🔝 TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/brown"
+        android:elevation="4dp"
+        android:title="Booking"
+        android:titleTextColor="@color/white" />
+
+    <!-- 📜 SCROLL CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottomNav">
+
+        <!-- 🔥 MAIN CONTAINER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- ❌ NO BOOKING MESSAGE -->
+            <TextView
+                android:id="@+id/tvNoBooking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No item is added yet"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/dark_brown"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- ✅ BOOKING CONTENT -->
+            <LinearLayout
+                android:id="@+id/bookingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 🧥 PRODUCT CARD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_bg"
+                    android:padding="12dp"
+                    android:layout_marginTop="15dp">
+
+                    <ImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/tvProductName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="8dp" />
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₹999/day"
+                        android:textSize="16sp"
+                        android:textColor="@color/dark_brown" />
+                </LinearLayout>
+
+                <!-- 👤 NAME -->
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/rounded_bg"
+                    android:hint="Enter your name"
+                    android:padding="10dp" />
+
+                <!-- 📅 DATE -->
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:focusable="false"
+                    android:background="@drawable/rounded_bg"
+                    android:hint="Select date"
+                    android:padding="10dp" />
+
+                <!-- 🔢 DAYS -->
+                <EditText
+                    android:id="@+id/etDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_bg"
+                    android:hint="Number of days"
+                    android:inputType="number"
+                    android:padding="10dp" />
+
+                <!-- 📍 ADDRESS -->
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/rounded_bg"
+                    android:hint="Enter address"
+                    android:padding="10dp" />
+
+                <!-- 💳 PAYMENT -->
+                <RadioGroup
+                    android:id="@+id/paymentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp">
+
+                    <RadioButton
+                        android:id="@+id/radioCOD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cash on Delivery" />
+
+                    <RadioButton
+                        android:id="@+id/radioOnline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pay Online" />
+                </RadioGroup>
+
+                <!-- 💰 TOTAL -->
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total: ₹0"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/dark_brown"
+                    android:layout_marginTop="10dp" />
+
+                <!-- ✅ BUTTON -->
+                <Button
+                    android:id="@+id/btnConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Confirm Booking"
+                    android:backgroundTint="@color/brown"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 🔻 BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_nav_bg"
+        app:itemIconSize="24dp"
+        app:itemTextColor="@color/brown"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

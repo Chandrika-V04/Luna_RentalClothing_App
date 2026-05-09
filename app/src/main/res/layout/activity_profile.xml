@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main">
+
+    <!-- TOOLBAR -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_main"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+    <!-- TITLE -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_brown"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="18dp" />
+
+    <!-- CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="85dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- PROFILE CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@color/light_brown"
+                android:padding="25dp"
+                android:layout_marginBottom="25dp">
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jack William"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_brown" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="jackwilliam1704@gmail.com"
+                    android:textSize="14sp"
+                    android:textColor="@color/brown"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <!-- BOOKINGS BUTTON -->
+            <Button
+                android:id="@+id/btnBookings"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="My Bookings"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/brown"
+                android:layout_marginBottom="10dp" />
+
+            <!-- BOOKINGS EXPAND -->
+            <LinearLayout
+                android:id="@+id/layoutBookings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@color/light_brown"
+                android:padding="15dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Your Bookings"
+                    android:textStyle="bold"
+                    android:textColor="@color/dark_brown"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Wedding Outfit - 12 Feb"
+                    android:textColor="@color/brown" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Party Wear - 20 Feb"
+                    android:textColor="@color/brown"
+                    android:layout_marginTop="5dp" />
+            </LinearLayout>
+
+            <!-- SETTINGS BUTTON -->
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Settings"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/brown"
+                android:layout_marginBottom="10dp" />
+
+            <!-- SETTINGS EXPAND -->
+            <LinearLayout
+                android:id="@+id/layoutSettings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:background="@color/light_brown"
+                android:padding="15dp"
+                android:layout_marginBottom="15dp">
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name"
+                    android:textColor="@color/dark_brown" />
+
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:textColor="@color/dark_brown"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/etAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Address"
+                    android:textColor="@color/dark_brown"
+                    android:layout_marginTop="10dp" />
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/brown"
+                    android:layout_marginTop="15dp" />
+            </LinearLayout>
+
+            <!-- LOGOUT -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/dark_brown" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_nav_bg"
+        app:itemIconSize="24dp"
+        app:itemTextColor="@color/brown"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</FrameLayout>

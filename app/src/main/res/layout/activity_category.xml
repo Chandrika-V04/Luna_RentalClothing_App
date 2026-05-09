@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- 🔝 HEADER -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/circle_background"
+            android:src="@drawable/ic_back_arrow"
+            android:contentDescription="Back"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="CATEGORY"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+
+
+    <!-- 🛍 PRODUCT LIST -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+    <TextView
+        android:id="@+id/tvNoBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No item is added yet"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <!-- 🔻 BOTTOM NAV -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bottom_nav_bg"
+        app:itemIconSize="24dp"
+        app:itemTextColor="@color/brown"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+</LinearLayout>

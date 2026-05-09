@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_main">#F5F1ED</color>      <!-- light beige -->
+    <color name="brown">#8B5E3C</color>       <!-- primary brown -->
+    <color name="dark_brown">#5A3A24</color>  <!-- text dark -->
+    <color name="light_brown">#E8DED6</color> <!-- cards -->
+    <color name="accent">#C8A27C</color>      <!-- highlight -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>

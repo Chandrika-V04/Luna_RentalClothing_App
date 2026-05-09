@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        tools:layout_editor_absoluteX="-83dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <ImageView
+            android:layout_width="200sp"
+            android:layout_height="100sp"
+            android:layout_marginBottom="20sp"
+            android:contentDescription="Luna Logo"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:text="Rent the Look. Own the Moment."
+            android:textColor="#B68A2E"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="40sp"
+            android:letterSpacing="0.05"
+            android:text="Fashion Rental App"
+            android:textColor="#8A8A8A"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="55sp"
+            android:layout_marginBottom="15sp"
+            android:backgroundTint="#8B5E3C"
+            android:onClick="openLogin"
+            android:text="LOGIN IN"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="match_parent"
+            android:layout_height="55sp"
+            android:backgroundTint="#E9DED2"
+            android:onClick="openSignup"
+            android:text="SIGN UP"
+            android:textColor="#8B5E3C" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
