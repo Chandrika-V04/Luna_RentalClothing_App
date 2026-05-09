@@ -115,21 +115,6 @@ Luna_RentalClothing_App/
 
 ---
 
-## 🗄️ Database Schema
-
-**Users Table**
-```
-users (fullname TEXT, email TEXT UNIQUE, password TEXT, address TEXT)
-```
-
-**Bookings Table**
-```
-bookings (id INTEGER PRIMARY KEY, product TEXT, price TEXT,
-          date DATE, days INTEGER, address TEXT, total TEXT, payment TEXT)
-```
-
----
-
 ## 🎯 Project Highlights
 
 - Supports sustainable fashion by encouraging clothing reuse ♻️
@@ -137,5 +122,3 @@ bookings (id INTEGER PRIMARY KEY, product TEXT, price TEXT,
 - Smooth navigation with BottomNavigationView 📲
 - Auto total cost calculation based on rental days 💰
 - Full booking history viewable in Profile 📋
-
----
